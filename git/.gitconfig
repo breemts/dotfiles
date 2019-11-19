@@ -1,0 +1,45 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Benjamin Reemts
+	email = benjamin.reemts@_.com
+[color]
+	status = auto
+	ui = auto
+	branch = auto
+	interactive = auto
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	a = add
+    ap = add -p
+	co = checkout
+	ci = commit --verbose
+	ca = commit -a --verbose
+    cm = commit -m
+    cam = commit -a -m
+	m = commit --amend --verbose
+	co = checkout
+    cob = checkout -b
+	col = checkout @{-1}
+	sup = submodule update --init --recursive
+
+	st = status
+	br = branch
+	d = diff
+    ds = diff --stat
+    dc = diff --cached
+	rl = ref log
+
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	# list branches sorted by last modified
+    b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+	# list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+	got='git '
