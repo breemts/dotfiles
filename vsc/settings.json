@@ -1,0 +1,147 @@
+{
+    "files.hotExit": "onExitAndWindowClose",
+    "window.restoreWindows": "all",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "spellright.language": [
+        "de",
+        "English",
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "cSpell.language": "en,de",
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "git-commit",
+        "go",
+        "handlebars",
+        "haskell",
+        "html",
+        "jade",
+        "java",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pug",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scala",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yaml",
+        "yml"
+    ],
+    "editor.lineNumbers":"on",
+    "vim.overrideCopy": false,
+    "vim.useCtrlKeys": false,
+    "vim.handleKeys": {
+        "<C-v>": true,
+        "<C-r>": true,
+        "<C-h>": true,
+        "<C-o>": true,
+        "<C-i>": true,
+        "<C-a>": true,
+        "<C-x>": true
+    },
+    "vim.autoindent": true,
+    "vim.startInInsertMode": true,
+     "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+        {
+            "before": ["<leader>", "r"],
+            "commands": [":reg"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "after": ["$"]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "after": ["^"]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "after": ["0"]
+        },
+        {
+            "before": ["<leader>", "i"],
+            "after": ["i_<esc>r"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.leader": "<space>",
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.highlightedyank.enable": true,
+    "vim.foldfix": true,
+    "vim.replaceWithRegister": true,
+    "files.associations": {
+        "*.conf_intel": "bat"
+    },
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "yaml.schemas": {
+        "file:///c%3A/Users/breemts1/.vscode/extensions/atlassian.atlascode-2.2.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "cSpell.userWords": [
+        "ASIL",
+        "AURIX",
+        "cmake",
+        "sensoris"
+    ],
+    "vim.cursorStylePerMode.visualline": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.replace": "underline",
+    "editor.cursorBlinking": "smooth"
+}
