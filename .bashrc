@@ -4,6 +4,12 @@ case $- in
       *) return;;
 esac
 
+if [[ $(grep Microsoft /proc/version) ]]; then
+  # export Display for X11 Server (VcXsrv in my case) 
+  DISPALY=:0
+  export DISPALY
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -13,9 +19,10 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
+# add command to history after execution
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
@@ -53,7 +60,5 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-alias ll='ls -la'
 
  [ -f ~/.bash_aliases ] && . ~/.bash_aliases
