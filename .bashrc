@@ -62,3 +62,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
  [ -f ~/.bash_aliases ] && . ~/.bash_aliases
+
+ # fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash
+[ -f /usr/share/bash-completion/completions/fzf ] && source /usr/share/bash-completion/completions/fzf
+[ -f ~/.config/fzf/fzf.conf ] && source ~/.config/fzf/fzf.conf
