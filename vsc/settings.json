@@ -1,8 +1,34 @@
 {
+    //general
     "files.hotExit": "onExitAndWindowClose",
     "window.restoreWindows": "all",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "update.showReleaseNotes": false,
+    "editor.lineNumbers":"on",
+    "editor.cursorBlinking": "smooth",
+    "window.zoomLevel": 0,
+    "search.useIgnoreFiles": false,
+
+    "dotfiles.repository": "breemts/LinuxConfig",
+    "dotfiles.installCommand": "~/dotfiles/setup.sh",
+
+    // remote devcontainers and terminal settings
+    //"terminal.explorerKind": "external",
+    //"terminal.external.linuxExec": "/bin/bash",
+    //"terminal.integrated.allowChords": false
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    "terminal.integrated.scrollback": 10000,
+    "remote.containers.defaultExtensions": [
+        "eamodio.gitlens",
+        "donjayamanne.githistory",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-german",
+        "davidanson.vscode-markdownlint"
+    ],
+
+    //spellcheck
     "spellright.language": [
         "de",
         "English",
@@ -48,7 +74,8 @@
         "yaml",
         "yml"
     ],
-    "editor.lineNumbers":"on",
+    // vim
+    "vim.leader": "<space>",
     "vim.overrideCopy": false,
     "vim.useCtrlKeys": false,
     "vim.handleKeys": {
@@ -71,15 +98,11 @@
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<leader>", "m"],
-            "commands": [
-                "bookmarks.toggle"
-            ]
+            "commands": ["bookmarks.toggle"]
         },
         {
             "before": ["<leader>", "l"],
-            "commands": [
-                "bookmarks.list"
-            ]
+            "commands": ["bookmarks.list"]
         },
         {
             "before": ["<leader>", "r"],
@@ -104,44 +127,21 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
         },
         {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        }
     ],
-    "vim.leader": "<space>",
     "vim.cursorStylePerMode.insert": "line",
     "vim.cursorStylePerMode.normal": "block",
     "vim.highlightedyank.enable": true,
     "vim.foldfix": true,
     "vim.replaceWithRegister": true,
-    "files.associations": {
-        "*.conf_intel": "bat"
-    },
-    "terminal.integrated.shell.linux": "/bin/bash",
-    "yaml.schemas": {
-        "file:///c%3A/Users/breemts1/.vscode/extensions/atlassian.atlascode-2.2.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-    },
-    "cSpell.userWords": [
-        "ASIL",
-        "AURIX",
-        "cmake",
-        "sensoris"
-    ],
     "vim.cursorStylePerMode.visualline": "block",
     "vim.cursorStylePerMode.visualblock": "block",
     "vim.cursorStylePerMode.visual": "block",
-    "vim.cursorStylePerMode.replace": "underline",
-    "editor.cursorBlinking": "smooth"
+    "vim.cursorStylePerMode.replace": "underline"
 }
