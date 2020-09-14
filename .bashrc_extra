@@ -17,6 +17,7 @@ if [[ $(grep Microsoft /proc/version) ]]; then
   # export Display for X11 Server (VcXsrv in my case) 
   DISPLAY=:0
   export DISPLAY
+  export LIBGL_ALWAYS_INDIRECT=1
 fi
 
  [ -f ~/.bash_aliases ] && . ~/.bash_aliases

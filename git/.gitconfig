@@ -33,6 +33,7 @@
     ds = diff --stat
     dc = diff --cached
 	rl = ref log
+	purge = !git checkout -- $1 && git clean -fdx && :
 
 	unstage = reset HEAD --
 	last = log -1 HEAD

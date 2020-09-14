@@ -1,4 +1,8 @@
-alias ll='ls -la'
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ll='ls $LS_OPTIONS -la'
+alias ls='ls $LS_OPTIONS'
+alias l='ls $LS_OPTIONS -l'
 # Some more alias to avoid making mistakes:
 alias rm='rm -v'
 alias cp='cp -v'
@@ -9,7 +13,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias llw='ls --group-directories-first -lha'
+alias llw='ls $LS_OPTIONS --group-directories-first -lha'
 
 # debian commands
 alias architecture='dpkg --print-architecture'
