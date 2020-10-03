@@ -15,6 +15,7 @@ function check_and_install() {
 
 # check if user is root (ID 0) or user is sudoer (sudo -l -U $(id -un))
 if  [ "$UID" -eq 0 ] || sudo -v; then
+    check_and_install bsdmainutils
     check_and_install wget
     check_and_install jq
     check_and_install curl
