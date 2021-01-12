@@ -33,7 +33,7 @@
     ds = diff --stat
     dc = diff --cached
 	rl = ref log
-	purge = !git checkout -- $1 && git clean -fdx && :
+	purge = "!git reset --hard && git clean -fdx && git submodule foreach --recursive git clean -xfd && git submodule foreach --recursive git reset --hard && git submodule update --init --recursive"
 
 	unstage = reset HEAD --
 	last = log -1 HEAD
