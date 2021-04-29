@@ -37,14 +37,15 @@ fi
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf \
 && $HOME/.fzf/install --all
 
-check_and_install bsdmainutils
-
 # installs .bashrc_extra and modifies .bashrc
 sed -i -e 's/HISTSIZE=.*/HISTSIZE=100000/' $HOME/.bashrc
 sed -i -e 's/HISTFILESIZE=.*/HISTFILESIZE=200000/' $HOME/.bashrc
 sed -i -e 's/#force_color_prompt=yes/force_color_prompt=yes/' $HOME/.bashrc
 echo "[ -f $HOME/.bashrc_extra ] && source $HOME/.bashrc_extra" >> ${HOME}/.bashrc
+
+echo "##### Copy some dot files ######"
 cp -v ${SCRIPT_DIR}/.bashrc_extra $HOME
+cp -v ${SCRIPT_DIR}/.bash_aliases $HOME
 
 # install .inputrc
 cp -v ${SCRIPT_DIR}/.inputrc $HOME
