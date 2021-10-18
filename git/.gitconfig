@@ -44,7 +44,7 @@
 	# list aliases
     la = "!git config -l | grep alias | cut -c 7-"
 
-	[credential]
+[credential]
 	helper = store
 [core]
 	editor = vim
