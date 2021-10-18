@@ -20,7 +20,7 @@ if [[ $(grep Microsoft /proc/version) ]]; then
   export LIBGL_ALWAYS_INDIRECT=1
 fi
 
- [ -f ~/.bash_aliases ] && . ~/.bash_aliases
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash

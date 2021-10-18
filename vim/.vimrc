@@ -4,6 +4,8 @@ syntax on
 "Mapping {{{
 let mapleader = " " "default is  \  
 inoremap jk <Esc>
+nnoremap <A-Up> :m-2<CR>
+nnoremap <A-Down> :m+<CR>
 "}}}
 "Basic settings {{{
 "Options {{{
